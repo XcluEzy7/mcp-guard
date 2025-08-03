@@ -23,18 +23,7 @@ mcp-guard/
 │   └── docs/
 │       ├── INSTALLATION.md         # Installation guide
 │       ├── USAGE.md                # Usage documentation
-│       ├── SECURITY.md             # Security policy
-│       ├── API.md                  # API documentation
-│       └── EXAMPLES.md             # Comprehensive examples
-│
-├── 🔧 Examples
-│   ├── basic_scan.py               # Basic usage examples
-│   ├── advanced_analysis.py        # Advanced analysis features
-│   └── ci_cd_integration.py        # CI/CD pipeline integration
-│
-└── ⚙️ Configuration
-    ├── .github/workflows/ci.yml     # GitHub Actions CI/CD
-    └── .gitignore                   # Git ignore rules
+
 ```
 
 ## 🚀 Key Features Implemented
@@ -242,5 +231,6 @@ mcp-guard/
 The project successfully bridges the gap between AI/MCP development and cybersecurity, providing developers and security professionals with the tools they need to build and maintain secure MCP implementations.
 
 ---
+
 
 **MCP Guard is ready for production use and community contribution!** 🚀
