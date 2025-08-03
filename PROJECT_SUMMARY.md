@@ -19,10 +19,7 @@ mcp-guard/
 │   ├── README.md                   # Comprehensive project documentation
 │   ├── CHANGELOG.md                # Detailed version history
 │   ├── CONTRIBUTING.md             # Contribution guidelines
-│   ├── LICENSE                     # MIT License
-│   └── docs/
-│       ├── INSTALLATION.md         # Installation guide
-│       ├── USAGE.md                # Usage documentation
+│   └── LICENSE                     # MIT License
 
 ```
 
@@ -234,3 +231,4 @@ The project successfully bridges the gap between AI/MCP development and cybersec
 
 
 **MCP Guard is ready for production use and community contribution!** 🚀
+
