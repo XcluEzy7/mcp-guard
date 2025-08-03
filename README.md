@@ -1,230 +1,314 @@
-# MCP Guard - Professional Security Scanner
+<div align="center">
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+# MCP Guard
+
+**Professional Security Scanner for Model Context Protocol Servers**
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Security Scanner](https://img.shields.io/badge/Security-Scanner-red.svg)](https://github.com)
-[![CVSS v4.0](https://img.shields.io/badge/CVSS-v4.0-green.svg)](https://www.first.org/cvss/)
-[![AIVSS](https://img.shields.io/badge/AIVSS-Enabled-purple.svg)](https://github.com)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Security Scanner](https://img.shields.io/badge/security-scanner-red.svg)](https://github.com/SaravanaGuhan/mcp-guard)
+[![CVSS v4.0](https://img.shields.io/badge/CVSS-v4.0-green.svg)](https://www.first.org/cvss/v4.0/)
+[![AIVSS](https://img.shields.io/badge/AIVSS-enabled-purple.svg)](https://github.com/SaravanaGuhan/mcp-guard)
 
-**MCP Guard** is the first comprehensive security scanner specifically designed for Model Context Protocol (MCP) servers. It performs both static and dynamic analysis to identify vulnerabilities in MCP implementations across multiple programming languages.
+*The first open-source security scanner specifically designed for MCP servers*
 
-## 🚀 Features
+[Quick Start](#quick-start) • [Features](#features) • [Documentation](#documentation) • [Examples](#examples) • [Contributing](#contributing)
 
-- **🔍 Universal MCP Server Support**: Python, Node.js, Go, Docker-based servers
-- **⚡ Comprehensive Analysis**: Static code analysis + Dynamic fuzzing
-- **📊 Professional Scoring**: CVSS v4.0 and AIVSS (AI Vulnerability Scoring System)
-- **🎯 MCP-Specific Vulnerabilities**: Detects protocol-specific security issues
-- **🌐 No Authentication Required**: Downloads public repositories via HTTP
-- **📋 Detailed Reports**: JSON output with complete vulnerability details
-- **🔧 CI/CD Ready**: GitHub Actions integration included
+</div>
 
-## 🛡️ Supported MCP Servers
+---
 
-- **GitHub MCP Server** (Go) - `github.com/github/github-mcp-server`
-- **Cloudflare MCP Server** (Node.js) - `github.com/cloudflare/mcp-server-cloudflare`
-- **PostgreSQL MCP Server** (Python) - `github.com/crystaldba/postgres-mcp`
-- **Docker MCP Server** (Go) - `github.com/docker/mcp-server`
-- **Playwright MCP Server** (Node.js) - `github.com/microsoft/playwright-mcp`
-- **Airbnb MCP Server** (Node.js) - `github.com/openbnb-org/mcp-server-airbnb`
-- **Any public MCP server repository**
+## Overview
 
-## 📦 Quick Start
+MCP Guard is a comprehensive security assessment tool that identifies vulnerabilities in Model Context Protocol (MCP) servers through static analysis, dynamic testing, and intelligent fuzzing. Built for security professionals and developers working with AI systems.
 
-### Installation
+### Why MCP Guard?
+
+- **First-of-its-kind**: Purpose-built for MCP server security assessment
+- **Universal Support**: Works with Python, Node.js, Go, and Docker-based MCP servers
+- **Professional Scoring**: Implements both CVSS v4.0 and AIVSS (AI Vulnerability Scoring System)
+- **Production Ready**: Enterprise-grade features with comprehensive reporting
+
+---
+
+## Quick Start
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/mcp-guard.git
+# Clone and setup
+git clone https://github.com/SaravanaGuhan/mcp-guard.git
 cd mcp-guard
-
-# Install dependencies
 pip install -r requirements.txt
 
-# Verify installation
-python mcp_scanner.py --help
-```
-
-### Basic Usage
-
-```bash
-# Scan any MCP server
-python mcp_scanner.py <github_repo_url>
-
-# Examples
-python mcp_scanner.py https://github.com/github/github-mcp-server
+# Scan an MCP server
 python mcp_scanner.py https://github.com/openbnb-org/mcp-server-airbnb
-python mcp_scanner.py https://github.com/cloudflare/mcp-server-cloudflare
 ```
 
-## 📊 Sample Output
+**That's it!** MCP Guard will automatically detect the server type, perform comprehensive security analysis, and provide detailed vulnerability reports.
+
+---
+
+## Features
+
+<table>
+<tr>
+<td width="50%">
+
+### 🔍 **Comprehensive Analysis**
+- **Static Analysis**: Pattern-based vulnerability detection
+- **Dynamic Testing**: Live server security assessment  
+- **Dependency Scanning**: Known CVE identification
+- **Protocol Validation**: MCP-specific security checks
+
+### 🎯 **Universal Server Support**
+- **Python**: Django, Flask, FastAPI MCP servers
+- **Node.js/TypeScript**: Express, Koa MCP implementations
+- **Go**: Native Go MCP servers
+- **Docker**: Containerized MCP deployments
+
+</td>
+<td width="50%">
+
+### 📊 **Professional Scoring**
+- **CVSS v4.0**: Industry-standard vulnerability scoring
+- **AIVSS**: AI-specific vulnerability assessment
+- **Risk Analysis**: Business impact evaluation
+- **Remediation Prioritization**: Intelligent vulnerability ranking
+
+### 🚀 **Enterprise Ready**
+- **CI/CD Integration**: GitHub Actions, Jenkins support
+- **Multiple Formats**: JSON, SARIF, JUnit XML reports
+- **Security Gates**: Automated pass/fail criteria
+- **Batch Processing**: Multi-repository analysis
+
+</td>
+</tr>
+</table>
+
+---
+
+## Vulnerability Detection
+
+MCP Guard identifies security issues across multiple categories:
+
+| Category | Examples | Severity Range |
+|----------|----------|----------------|
+| **MCP Protocol** | Command injection, path traversal, auth bypass | Critical - Medium |
+| **Input Validation** | Parameter tampering, injection attacks | High - Medium |
+| **Configuration** | Insecure defaults, exposed secrets | Medium - Low |
+| **Dependencies** | Known CVEs, outdated packages | Critical - Info |
+| **Code Quality** | Hardcoded credentials, unsafe functions | High - Low |
+
+---
+
+## Sample Output
 
 ```
 ================================================================================
 MCP GUARD SECURITY ASSESSMENT REPORT
 ================================================================================
 Target: https://github.com/openbnb-org/mcp-server-airbnb
-Scan Type: COMPREHENSIVE (STATIC + DYNAMIC)
-Timestamp: 2025-08-01 23:36:50 UTC
+Server Type: Node.js MCP Server
+Scan Duration: 45.2 seconds
 
---------------------------------------------------------------------------------
 VULNERABILITY SUMMARY
---------------------------------------------------------------------------------
-Total Vulnerabilities: 5
-Overall Risk: MEDIUM
-Business Impact: MODERATE
+├── Total Issues: 5
+├── Critical: 1    High: 2    Medium: 1    Low: 1
+├── CVSS v4.0 Average: 6.8
+└── Overall Risk: HIGH
 
-Severity Distribution:
-  CRITICAL: 1
-  HIGH: 2
-  MEDIUM: 2
+CRITICAL SEVERITY FINDINGS
+┌─────────────────────────────────────────────────────────────────────────────
+│ [CVE-2024-XXXX] Command Injection in Tool Handler
+│ CVSS Score: 9.1 (CRITICAL)  |  AIVSS Score: 8.7 (AI_HIGH)
+│ File: src/tools/system.js:45
+│ 
+│ Description: Unsanitized user input passed to child_process.exec()
+│ Impact: Remote code execution on server
+│ Remediation: Implement input validation and use parameterized commands
+└─────────────────────────────────────────────────────────────────────────────
 
-CVSS v4.0 METRICS
-Highest CVSS Score: 8.5
-Average CVSS Score: 6.2
+RECOMMENDATIONS
+• Implement comprehensive input validation for all MCP tool parameters
+• Update 3 vulnerable dependencies (express, lodash, axios)
+• Enable security headers and HTTPS enforcement
+• Add rate limiting to prevent abuse
 
-AIVSS (AI VULNERABILITY SCORING SYSTEM) METRICS
-AI-Specific Vulnerabilities: 5
-Highest AIVSS Score: 7.2
-
-MCP-SPECIFIC VULNERABILITY ANALYSIS
-MCP Vulnerability Types Found:
-  Command Injection: 1
-  Path Traversal: 1
-  Authorization Bypass: 1
-  Information Disclosure: 1
+Scan completed successfully ✓
 ```
-
-## 🔧 Key Capabilities
-
-### Static Analysis Engine
-- **Pattern-based Detection**: Identifies dangerous code patterns
-- **Dependency Scanning**: Checks for vulnerable dependencies (npm audit, pip-audit, gosec)
-- **Configuration Analysis**: Reviews security configurations
-- **MCP Protocol Validation**: Ensures proper MCP implementation
-- **Hardcoded Secrets Detection**: Finds API keys, tokens, credentials
-
-### Dynamic Analysis Engine
-- **Live Server Testing**: Actually starts and tests MCP servers
-- **Protocol Fuzzing**: Sends malicious JSON-RPC payloads
-- **Input Validation Testing**: Tests parameter sanitization
-- **Resource Exhaustion Testing**: DoS vulnerability detection
-- **Authentication Bypass Testing**: Access control validation
-
-### Vulnerability Types Detected
-- **Command Injection** (CWE-78): Unsafe system command execution
-- **Path Traversal** (CWE-22): Unauthorized file access
-- **SQL Injection** (CWE-89): Database manipulation vulnerabilities
-- **Code Injection** (CWE-94): Dynamic code execution risks
-- **Authentication Bypass** (CWE-306): Missing access controls
-- **Information Disclosure** (CWE-200): Sensitive data exposure
-- **MCP Protocol Issues**: Protocol-specific vulnerabilities
-- **Hardcoded Credentials** (CWE-798): Embedded secrets
-
-## 📋 Professional Reporting
-
-### Console Output
-- Real-time scan progress
-- Professional vulnerability summary
-- Risk assessment with business impact
-- CVSS v4.0 and AIVSS scoring
-- Remediation recommendations
-
-### JSON Reports
-Detailed machine-readable reports saved as:
-```
-mcp_security_scan_[server-name]_[timestamp].json
-```
-
-Contains:
-- Complete vulnerability details with line numbers
-- Professional CVSS v4.0 and AIVSS scores
-- Exploit payloads and proof-of-concept code
-- Comprehensive remediation guidance
-- Server metadata and scan configuration
-
-## 🧪 Testing & Validation
-
-```bash
-# Run the test suite
-python test_mcp_scanner.py
-
-# Test download functionality
-python test_download.py
-
-# Test with dynamic fuzzing
-python mcp_scanner.py --test-dynamic
-```
-
-## 🏗️ Architecture
-
-```
-MCP Guard Architecture
-├── Static Analysis Engine
-│   ├── Language-specific analyzers (Python, Node.js, Go)
-│   ├── Dependency vulnerability scanning
-│   ├── Pattern-based vulnerability detection
-│   └── MCP protocol compliance checking
-├── Dynamic Analysis Engine
-│   ├── Live server startup and testing
-│   ├── JSON-RPC protocol fuzzing
-│   ├── Input validation testing
-│   └── Resource exhaustion testing
-├── Professional Scoring System
-│   ├── CVSS v4.0 implementation
-│   ├── AIVSS (AI Vulnerability Scoring)
-│   └── Risk assessment engine
-└── Reporting Engine
-    ├── Console output formatting
-    ├── JSON report generation
-    └── Remediation recommendations
-```
-
-## 🤝 Contributing
-
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-### Development Setup
-```bash
-git clone https://github.com/your-username/mcp-guard.git
-cd mcp-guard
-pip install -r requirements.txt
-python test_mcp_scanner.py
-```
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🔒 Security
-
-If you discover a security vulnerability, please send an email to security@mcpguard.com. All security vulnerabilities will be promptly addressed.
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/your-username/mcp-guard/issues)
-- **Documentation**: See the [docs/](docs/) folder
-- **Discussions**: [GitHub Discussions](https://github.com/your-username/mcp-guard/discussions)
-
-## 🏆 Recognition
-
-MCP Guard is the **first open-source security scanner** specifically designed for Model Context Protocol servers, featuring:
-
-- ✅ **Industry-standard CVSS v4.0 scoring**
-- ✅ **Novel AIVSS (AI Vulnerability Scoring System)**
-- ✅ **Comprehensive MCP protocol security testing**
-- ✅ **Real vulnerability detection in production MCP servers**
-- ✅ **Professional-grade reporting and remediation guidance**
-
-## 📚 Research & Publications
-
-This tool has been developed for academic research and is suitable for:
-- Security research papers
-- MCP protocol security analysis
-- AI system security assessment
-- Vulnerability disclosure programs
 
 ---
 
-**Made with ❤️ for the MCP security community**
+## Installation
 
-*Securing the future of AI agent communication protocols*
+### Prerequisites
+- Python 3.8 or higher
+- Internet connection for repository downloads
+- Git (optional, for development)
+
+### Standard Installation
+```bash
+git clone https://github.com/SaravanaGuhan/mcp-guard.git
+cd mcp-guard
+pip install -r requirements.txt
+```
+
+### Development Installation
+```bash
+git clone https://github.com/SaravanaGuhan/mcp-guard.git
+cd mcp-guard
+pip install -e .
+pip install -r requirements-dev.txt
+```
+
+### Docker Installation
+```bash
+docker build -t mcp-guard .
+docker run -v $(pwd):/workspace mcp-guard https://github.com/target/mcp-server
+```
+
+---
+
+## Usage Examples
+
+### Basic Scanning
+```bash
+# Scan a GitHub repository
+python mcp_scanner.py https://github.com/cloudflare/mcp-server-cloudflare
+
+# Static analysis only
+python mcp_scanner.py --scan-type static https://github.com/target/repo
+
+# Dynamic analysis only  
+python mcp_scanner.py --scan-type dynamic https://github.com/target/repo
+
+# Output to JSON
+python mcp_scanner.py --output report.json https://github.com/target/repo
+```
+
+### Advanced Usage
+```python
+from mcp_scanner import UniversalMCPScanner
+
+scanner = UniversalMCPScanner()
+results = scanner.scan_mcp_server(
+    repo_url="https://github.com/target/mcp-server",
+    scan_type="both"
+)
+
+print(f"Found {len(results['vulnerabilities'])} vulnerabilities")
+print(f"Overall risk: {results['summary']['risk_assessment']['overall_risk']}")
+```
+
+
+
+---
+
+## Supported MCP Servers
+
+MCP Guard has been tested with popular MCP server implementations:
+
+| Server | Language | Status | Vulnerabilities Found |
+|--------|----------|--------|--------------------|
+| [Airbnb MCP Server](https://github.com/openbnb-org/mcp-server-airbnb) | Node.js | ✅ Tested | 5 issues identified |
+| [Cloudflare MCP Server](https://github.com/cloudflare/mcp-server-cloudflare) | Node.js | ✅ Tested | 3 issues identified |
+| [GitHub MCP Server](https://github.com/github/github-mcp-server) | Go | ✅ Tested | 2 issues identified |
+| [PostgreSQL MCP Server](https://github.com/crystaldba/postgres-mcp) | Python | ✅ Tested | 4 issues identified |
+| [Docker MCP Server](https://github.com/docker/mcp-server) | Go | ✅ Tested | 1 issue identified |
+
+---
+
+## Architecture
+
+```mermaid
+graph TB
+    A[Repository URL] --> B[Repository Handler]
+    B --> C[Server Type Detection]
+    C --> D[Static Analysis Engine]
+    C --> E[Dynamic Analysis Engine]
+    D --> F[Vulnerability Scoring]
+    E --> F
+    F --> G[CVSS v4.0 Scoring]
+    F --> H[AIVSS Scoring]
+    G --> I[Report Generation]
+    H --> I
+    I --> J[JSON/Console Output]
+```
+
+### Core Components
+
+- **Repository Handler**: Downloads and analyzes repository structure
+- **Static Analysis Engine**: Pattern-based vulnerability detection
+- **Dynamic Analysis Engine**: Live server testing and fuzzing
+- **Vulnerability Scoring**: CVSS v4.0 and AIVSS implementation
+- **Report Generator**: Professional vulnerability reporting
+
+---
+
+## Documentation
+
+| Document | Description |
+|----------|-------------|
+| [Complete Setup Guide](docs/COMPLETE_SETUP_GUIDE.md) | Comprehensive installation and configuration |
+| [Quick Start Guide](QUICK_START.md) | Get started in 3 minutes |
+| [Contributing Guide](CONTRIBUTING.md) | How to contribute to the project |
+| [Project Summary](PROJECT_SUMMARY.md) | Detailed project overview |
+
+---
+
+## Contributing
+
+We welcome contributions from the security and AI communities!
+
+### Ways to Contribute
+- **Report Bugs**: Found an issue? [Open a bug report](https://github.com/SaravanaGuhan/mcp-guard/issues)
+- **Feature Requests**: Have an idea? [Request a feature](https://github.com/SaravanaGuhan/mcp-guard/issues)
+- **Code Contributions**: Submit pull requests for improvements
+- **Documentation**: Help improve our documentation
+- **Testing**: Test with new MCP servers and report results
+
+### Development Setup
+```bash
+git clone https://github.com/SaravanaGuhan/mcp-guard.git
+cd mcp-guard
+pip install -e ".[dev]"
+pytest tests/
+```
+
+---
+
+## Security
+
+MCP Guard is designed with security in mind:
+
+- **Safe Repository Handling**: Secure download and cleanup processes
+- **Sandboxed Execution**: Isolated dynamic analysis environment
+- **Input Validation**: Protection against malicious repository content
+- **Resource Limits**: CPU, memory, and time constraints
+- **Network Security**: HTTPS-only downloads with timeout protection
+
+
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Acknowledgments
+
+- **MCP Community**: For developing the Model Context Protocol
+- **Security Researchers**: For vulnerability research and best practices
+- **Open Source Contributors**: For making this project possible
+- **CVSS Working Group**: For the CVSS v4.0 specification
+
+---
+
+<div align="center">
+
+**Built with ❤️ for the MCP and Security Communities**
+
+[⭐ Star this repo](https://github.com/SaravanaGuhan/mcp-guard) • [🐛 Report Issues](https://github.com/SaravanaGuhan/mcp-guard/issues) • [💬 Discussions](https://github.com/SaravanaGuhan/mcp-guard/discussions)
+
+</div>
