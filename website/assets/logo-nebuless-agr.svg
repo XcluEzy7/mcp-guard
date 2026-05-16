@@ -1,0 +1,22 @@
+<svg width="196" height="44" viewBox="0 0 196 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Nebuless.AGR logo</title>
+  <desc id="desc">A guarded agent route mark with the Nebuless.AGR wordmark.</desc>
+  <defs>
+    <linearGradient id="g" x1="4" y1="5" x2="41" y2="41" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#76E4FF"/>
+      <stop offset="0.55" stop-color="#6678FF"/>
+      <stop offset="1" stop-color="#FFC35C"/>
+    </linearGradient>
+    <filter id="s" x="-10" y="-10" width="64" height="64" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#5368FF" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <g filter="url(#s)">
+    <path d="M22 3.8 39.5 13.9v16.2L22 40.2 4.5 30.1V13.9L22 3.8Z" fill="#11192B" stroke="url(#g)" stroke-width="1.7"/>
+    <path d="M13.2 28.4V16.2l8.8-5.1 8.8 5.1v12.2" stroke="#DDEBFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M13.2 28.4h17.6" stroke="#FFC35C" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M17.1 22.1h9.8" stroke="#76E4FF" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="54" y="27" fill="#EDF4FF" font-family="Manrope, Arial, sans-serif" font-size="21" font-weight="800" letter-spacing="-0.9">Nebuless</text>
+  <text x="150" y="27" fill="#76E4FF" font-family="Azeret Mono, monospace" font-size="15" font-weight="700">.AGR</text>
+</svg>

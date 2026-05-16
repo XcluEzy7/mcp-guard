@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nebuless.AGR | MCP Guard security scanner</title>
+  <meta name="description" content="Nebuless.AGR packages MCP Guard into a scanner-backed audit workflow for MCP servers and agent-accessible developer tools." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Nebuless.AGR home">
+      <img src="assets/logo-nebuless-agr.png?v=scanner-v2" alt="Nebuless.AGR" />
+      <span>Nebuless.AGR</span>
+    </a>
+    <nav aria-label="Deck navigation">
+      <a href="#hero">Hero</a>
+      <a href="#information">Information</a>
+      <a href="#market">Market</a>
+      <a href="#offer">Offer</a>
+    </nav>
+    <a class="button button-small" href="mailto:sales@nebuless.dev?subject=Nebuless.AGR%20MCP%20Guard%20assessment">Book assessment</a>
+  </header>
+
+  <main id="top">
+    <section class="video-section slide" aria-label="MCP Guard scanner overview video">
+      <video class="hyperframe-video hero-video" src="assets/agr-governance-reel.mp4?v=mcp-guard-v2" autoplay muted loop playsinline preload="metadata" poster="assets/logo-nebuless-agr.png?v=scanner-v2"></video>
+      <div class="video-caption reveal">
+        <b>MCP Guard scanner surface</b>
+        <span>Repository intake, server detection, static and dynamic analysis, CVSS, AIVSS, and CI-ready reports.</span>
+      </div>
+    </section>
+
+    <section id="hero" class="hero slide">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> MCP Guard scanner-backed audits</p>
+        <h1>Find risky MCP servers before agents can use them.</h1>
+        <p class="lead">Nebuless.AGR packages MCP Guard into a focused security assessment for MCP servers and adjacent agent-accessible tooling, then turns findings into evidence, remediation priorities, and CI gates.</p>
+        <div class="actions">
+          <a class="button button-primary" href="#offer">Book security assessment</a>
+          <a class="button button-secondary" href="#information">See scanner output</a>
+        </div>
+      </div>
+      <aside class="logo-stage reveal" aria-label="Nebuless.AGR product mark">
+        <img src="assets/nebuless-agr-logo-concept.png?v=scanner-v2" alt="Nebuless.AGR shield, cloud, and developer-tool nodes" />
+        <div class="logo-caption">
+          <b>Nebuless.AGR</b>
+          <span>MCP Guard assessment, evidence, and security gate packaging.</span>
+        </div>
+      </aside>
+    </section>
+
+    <section id="information" class="slide problem-slide">
+      <div class="slide-label">01 / Information</div>
+      <div class="section-intro reveal">
+        <p class="kicker">The unowned MCP attack surface</p>
+        <h2>MCP servers expose real code, data, and automation paths to autonomous agents.</h2>
+        <p>MCP Guard is a professional security scanner for Model Context Protocol servers. It downloads a target repository, detects the server type, runs static and dynamic analysis, checks dependencies and protocol behavior, then reports vulnerabilities with CVSS v4.0 and AIVSS scoring.</p>
+      </div>
+      <div class="risk-grid">
+        <article class="reveal"><b>Static analysis</b><span>Pattern-based checks for command injection, path traversal, unsafe functions, auth gaps, secrets, and insecure defaults.</span></article>
+        <article class="reveal"><b>Dynamic testing</b><span>Live server assessment and fuzzing to catch behavior that static checks alone miss.</span></article>
+        <article class="reveal"><b>Dependency and protocol checks</b><span>Known CVEs, package risk, JSON-RPC handling, transport assumptions, and MCP-specific security patterns.</span></article>
+        <article class="reveal"><b>Professional reports</b><span>Console, JSON, SARIF, JUnit, executive summaries, and security gates for CI adoption.</span></article>
+      </div>
+    </section>
+
+    <section id="product" class="slide split">
+      <div class="terminal-card reveal">
+        <div class="terminal-head"><i></i><i></i><i></i><span>mcp-guard scan</span></div>
+<pre><code>$ python mcp_scanner.py https://github.com/team/mcp-server
+
+TARGET      Node.js MCP Server
+SCAN TYPE   comprehensive
+
+STATIC      command injection in tool handler
+DYNAMIC     unsafe file access probe accepted
+DEPENDENCY  vulnerable package detected
+PROTOCOL    missing authorization on tool call
+
+SCORING
+  CVSS v4.0: 9.1 CRITICAL
+  AIVSS:     8.7 AI_HIGH
+
+OUTPUTS
+  report.json
+  results.sarif
+  junit.xml
+  remediation-priorities.md</code></pre>
+      </div>
+      <div class="narrative reveal">
+        <p class="kicker">The product focus</p>
+        <h2>AGR is the MCP Guard audit package, not a proxy product.</h2>
+        <p>Nebuless.AGR stays centered on scanner-backed review: discover the MCP server surface, score vulnerabilities, produce evidence, and help teams decide what can ship.</p>
+        <ul class="check-list">
+          <li><strong>Scan:</strong> Python, Node, Go, and Docker-based MCP servers.</li>
+          <li><strong>Score:</strong> map findings to CVSS v4.0, AIVSS, CWE, severity, business impact, and exploitability.</li>
+          <li><strong>Report:</strong> create machine-readable artifacts and executive summaries.</li>
+          <li><strong>Gate:</strong> convert critical findings into CI pass or fail criteria before release.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="market" class="slide market-slide">
+      <div class="slide-label">03 / Market</div>
+      <div class="section-intro reveal">
+        <p class="kicker">Where the niche is</p>
+        <h2>General security scanners do not understand MCP server behavior or AI-specific tool risk.</h2>
+        <p>The gap is narrow enough to ship fast and expensive enough to buy: AI agencies, devtool startups, and platform teams need proof that MCP servers are safe before a client, SOC 2 reviewer, or internal security team blocks adoption.</p>
+      </div>
+      <div class="buyer-grid">
+        <article class="reveal"><span>01</span><h3>AI agencies</h3><p>They install MCP servers for clients and need a paid safety artifact before handoff.</p></article>
+        <article class="reveal"><span>02</span><h3>Devtool startups</h3><p>They are adding MCP interfaces and need lightweight governance before enterprise pilots.</p></article>
+        <article class="reveal"><span>03</span><h3>Platform teams</h3><p>They want developers using agents without unreviewed server access to repos, files, secrets, and deployment paths.</p></article>
+      </div>
+    </section>
+
+    <section class="video-section slide" aria-label="MCP Guard evidence flow video">
+      <video class="hyperframe-video hero-video" src="assets/agr-audit-path.mp4?v=mcp-guard-v2" autoplay muted loop playsinline preload="metadata" poster="assets/logo-nebuless-agr.png?v=scanner-v2"></video>
+      <div class="video-caption reveal">
+        <b>Scanner-backed evidence flow</b>
+        <span>Clone, detect, scan, score, export, and gate the MCP server before it reaches production.</span>
+      </div>
+    </section>
+
+    <section id="offer" class="slide offer">
+      <div class="offer-card reveal">
+        <p class="kicker">Rapid MCP security assessment</p>
+        <h2>Secure your MCP server surface before it reaches production.</h2>
+        <p>Book a fixed-scope MCP Guard Security Audit. We scan your MCP servers, review high-risk findings, prioritize remediation, and deliver CI-ready evidence in one business day.</p>
+        <div class="deliverables">
+          <span>MCP inventory</span>
+          <span>Risk report</span>
+          <span>CVSS and AIVSS scoring</span>
+          <span>SARIF export</span>
+          <span>JUnit output</span>
+          <span>CI gate plan</span>
+        </div>
+        <div class="price-row">
+          <strong>$2,000</strong>
+          <span>MCP security posture</span>
+        </div>
+        <a class="button button-primary" href="mailto:sales@nebuless.dev?subject=Book%20a%20Nebuless.AGR%20MCP%20Guard%20assessment">Book security assessment</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
